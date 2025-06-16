@@ -29,7 +29,7 @@ export function Experience() {
       company: 'Gofrugal Technologies',
       period: '2021 - 2023',
       type: 'job',
-      description: 'Developed and maintained the UI for Servquick, a POS web app for the restaurant industry, using Angular and AngularJS. Delivered key modules like Wastage Management, Offer Management, and customer-facing displays (KDS & CDS). Collaborated in Agile teams to ship features efficiently. Also contributed to Go-Contactless, a mobile app enabling waiterless restaurant ordering.',
+      description: 'Built 10+ core features for ServQuick POS, used by 2,000+ restaurants across India and Southeast Asia, including modules like Offer Management, Barcode Printing, and Inventory Wastage—reducing manual tasks by 25%. Led frontend optimizations that cut page load times by 40% on low-bandwidth networks. Collaborated cross-functionally in Agile sprints and co-developed Go-Contactless, powering 10,000+ safe, QR-based transactions during COVID-19.',
       technologies: ['Angular', 'Angular.js', 'Typescript', 'Javascript', 'HTML/CSS'],
     },{
       role: "Bachelor's Degree",

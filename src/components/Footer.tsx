@@ -1,5 +1,5 @@
-import React from 'react';
-import { GithubIcon, LinkedinIcon, TwitterIcon, ArrowUpIcon } from 'lucide-react';
+import { ArrowUpIcon } from 'lucide-react';
+
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -18,23 +18,6 @@ export function Footer() {
               Creating beautiful digital experiences.
             </p>
           </div>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <GithubIcon size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <LinkedinIcon size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              <TwitterIcon size={20} />
-            </a>
-          </div>
-        </div>
-        <div className="border-t border-gray-700 my-8"></div>
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Portfolio. All rights reserved.
-          </p>
           <button onClick={scrollToTop} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
             Back to top
             <ArrowUpIcon size={16} />

@@ -38,30 +38,24 @@ export function HeroSection() {
                 Get in Touch
               </a>
               <a
-                href="#experience"
+                href="https://drive.google.com/file/d/15ODzuyf2g8A-TGbwYDPO2Ejdhtlz8km1/view?usp=drive_link" target='blank'
                 className="px-6 py-3 border border-gray-700 hover:border-indigo-500 rounded-lg font-medium transition-all duration-300 group"
               >
-                View My Work
+                Resume
               </a>
             </div>
             <div className="flex items-center gap-6 pt-4">
               <a
-                href="#"
+                href="https://www.github.com/amaldevcm" target='blank'
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <GithubIcon size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/amaldevcm" target='blank'
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <LinkedinIcon size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <TwitterIcon size={20} />
               </a>
             </div>
           </div>

@@ -15,7 +15,7 @@ export function ProjectsSection() {
     title: 'FlockFinder',
     category: 'web',
     image: 'https://github.com/user-attachments/assets/19d549dd-e8ab-4d7a-b851-b5037b3cca5f',
-    description: 'A user-friendly web application that helps users identify and learn about birds through image recognition. Built with Flask, HTML, and CSS, BirdWatcher leverages deep learning to classify bird species from uploaded images. Perfect for bird enthusiasts and curious observers alike.',
+    description: 'A user-friendly web application that helps users identify and learn about birds through image recognition. FlockFinder leverages deep learning to classify bird species from uploaded images.',
     technologies: ['Flask', 'Python', 'Scikit-learn', 'TensorFlow'],
     webLink: null,
     gitLink: "https://github.com/amaldevcm/FlockFinder"
@@ -23,7 +23,7 @@ export function ProjectsSection() {
     title: 'FarmGo App',
     category: 'app',
     image: 'https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-    description: 'A productivity app that helps teams organize and track their tasks and projects.',
+    description: 'A mobile app to support farmers in achieving fair pricing for their agricultural produce by eliminating the need for middlemen and ensuring transparent transactions',
     technologies: ['Android Studio', 'Java', 'Firebase'],
     webLink: null,
     gitLink: "https://github.com/SibiChakravarthy7311/FarmGoApp"

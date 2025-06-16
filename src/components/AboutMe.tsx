@@ -11,11 +11,12 @@ export default function AboutMe() {
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                     <div className="w-full md:w-1/2">
                         <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-                            Hello! I’m a software engineer with over 2 years of experience building scalable, real-world applications.
-                            My expertise lies in full-stack development, with a strong focus on frontend frameworks like Angular and React, and backend technologies like Node.js and Flask.
+                            I’m a software engineer with over 2 years of experience building scalable, real-world applications.
+                            My expertise lies in full-stack development, with a strong focus on frontend frameworks like Angular and React, 
+                            and backend technologies like Node.js and Flask.
                         </p>
                         <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-                            Currently, I’m pursuing my Master’s in Computer Science at Binghamton University,
+                            Currently, I’m pursuing Master’s in Computer Science at SUNY Binghamton,
                             where I’m deepening my skills in computer vision, algorithms, and machine learning.
                         </p>
                         <p className="text-lg text-gray-700 dark:text-gray-300">
