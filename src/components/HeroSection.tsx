@@ -70,11 +70,11 @@ export function HeroSection() {
             <div className="relative">
               {/* Developer illustration/avatar placeholder */}
               <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-indigo-600/20 via-purple-600/20 to-transparent border border-indigo-500/20 backdrop-blur-sm flex items-center justify-center">
-                <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                  alt="Professional portrait"
-                  className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover"
-                />
+                <div className="w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center animate-pulse">
+                  <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center animate-pulse">
+                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-indigo-500/30 to-purple-500/30 animate-pulse"></div>
+                  </div>
+                </div>
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-indigo-600/30 rounded-full filter blur-xl"></div>
               <div className="absolute -top-4 -left-4 w-32 h-32 bg-purple-600/30 rounded-full filter blur-xl"></div>
@@ -82,7 +82,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/3 flex flex-col items-center animate-bounce">
           <span className="text-sm text-gray-400 mb-2">Scroll Down</span>
           <ArrowDownIcon size={20} className="text-gray-400" />
         </div>

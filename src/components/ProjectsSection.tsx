@@ -6,19 +6,27 @@ export function ProjectsSection() {
   const projects = [{
     title: 'E-Commerce Platform',
     category: 'web',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80',
+    image: 'https://github.com/user-attachments/assets/cced1deb-cb99-4f05-bf63-76100bd34982',
     description: 'A full-featured e-commerce platform with product management, cart, and payment processing.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    webLink: '#',
-    gitLink: '#'
-  }, {
-    title: 'Task Management App',
+    technologies: ['Angular', 'Node.js', 'MongoDB', 'Express'],
+    webLink: null,
+    gitLink: "https://github.com/amaldevcm/E-Commerce"
+  },{
+    title: 'FlockFinder',
+    category: 'web',
+    image: 'https://github.com/user-attachments/assets/19d549dd-e8ab-4d7a-b851-b5037b3cca5f',
+    description: 'A user-friendly web application that helps users identify and learn about birds through image recognition. Built with Flask, HTML, and CSS, BirdWatcher leverages deep learning to classify bird species from uploaded images. Perfect for bird enthusiasts and curious observers alike.',
+    technologies: ['Flask', 'Python', 'Scikit-learn', 'TensorFlow'],
+    webLink: null,
+    gitLink: "https://github.com/amaldevcm/FlockFinder"
+  },{
+    title: 'FarmGo App',
     category: 'app',
     image: 'https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
     description: 'A productivity app that helps teams organize and track their tasks and projects.',
-    technologies: ['React', 'Redux', 'Firebase'],
-    webLink: '#',
-    gitLink: '#'
+    technologies: ['Android Studio', 'Java', 'Firebase'],
+    webLink: null,
+    gitLink: "https://github.com/SibiChakravarthy7311/FarmGoApp"
   }];
 
   const filters = [{
@@ -30,9 +38,6 @@ export function ProjectsSection() {
   }, {
     id: 'app',
     label: 'App Development'
-  }, {
-    id: 'ui',
-    label: 'UI/UX Design'
   }];
 
   const filteredProjects = activeFilter === 'all' ? projects : projects.filter(project => project.category === activeFilter);
@@ -67,14 +72,19 @@ export function ProjectsSection() {
                     </span>)}
                 </div>
                 <div className="flex justify-between">
+                { project.gitLink && 
                   <a href={project.gitLink} className="text-purple-400 hover:text-purple-300 flex items-center gap-1 text-sm">
                     <GithubIcon size={16} />
                     Source Code
                   </a>
+                }
+
+                { project.webLink && 
                   <a href={project.webLink} className="text-cyan-400 hover:text-cyan-300 flex items-center gap-1 text-sm">
                     <ExternalLinkIcon size={16} />
                     Live Demo
                   </a>
+                }
                 </div>
               </div>
             </div>)}
