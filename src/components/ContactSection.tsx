@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPinIcon, MailIcon, PhoneIcon, SendIcon } from "lucide-react";
+import { MapPinIcon, MailIcon, PhoneIcon, SendIcon, GithubIcon, Linkedin } from "lucide-react";
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,6 +67,37 @@ export function ContactSection() {
                   <p className="text-gray-400">
                     +1 (607) 352-0414
                   </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                  <GithubIcon
+                    className="text-cyan-500"
+                    size={24}
+                  />
+                </div>
+                <div>
+                  <a className="text-lg font-medium mb-1" href="https://github.com/amaldevcm" target="blank">
+                    Github
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                  <Linkedin
+                    className="text-purple-500"
+                    size={24}
+                  />
+                </div>
+                <div className="items-center">
+                  <a className="text-lg font-medium mb-1" href="https://www.linkedin.com/in/amaldevcm" target="blank">
+                    LinkedIn
+                  </a>
+                  {/* <p className="text-gray-400">
+                    +1 (607) 352-0414
+                  </p> */}
                 </div>
               </div>
             </div>

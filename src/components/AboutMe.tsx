@@ -16,7 +16,7 @@ export default function AboutMe() {
                             and backend technologies like Node.js and Flask.
                         </p>
                         <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-                            Currently, I’m pursuing Master’s in Computer Science at SUNY Binghamton,
+                            Currently, I’m pursuing Master’s in Computer Science at Binghamton University,
                             where I’m deepening my skills in computer vision, algorithms, and machine learning.
                         </p>
                         <p className="text-lg text-gray-700 dark:text-gray-300">

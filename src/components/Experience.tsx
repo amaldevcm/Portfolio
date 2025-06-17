@@ -15,8 +15,8 @@ export function Experience() {
       company: 'VIT Bangalore',
       period: '2023 - 2024',
       type: 'education',
-      description: 'Completed a data science certification focused on data analysis, machine learning, and Python tools including TensorFlow and Scikit-learn.',
-      technologies: ['Python', 'Deep Learning', 'Machine Learning', 'AI','Tensorflow', 'Scikit-learn', 'Flask'],
+      description: 'Completed a data science certification focused on data science, AI, ML, and Python tools including TensorFlow and Scikit-learn.',
+      technologies: ['Python', 'Deep Learning', 'ML', 'AI','Tensorflow', 'Scikit-learn', 'Flask'],
     },{
       role: 'Software Developer',
       company: 'Zoho Corporation',
@@ -29,7 +29,7 @@ export function Experience() {
       company: 'Gofrugal Technologies',
       period: '2021 - 2023',
       type: 'job',
-      description: 'Built 10+ core features for ServQuick POS, used by 2,000+ restaurants across India and Southeast Asia, including modules like Offer Management, Barcode Printing, and Inventory Wastage—reducing manual tasks by 25%. Led frontend optimizations that cut page load times by 40% on low-bandwidth networks. Collaborated cross-functionally in Agile sprints and co-developed Go-Contactless, powering 10,000+ safe, QR-based transactions during COVID-19.',
+      description: 'Built 10+ core features for ServQuick POS, supporting over 2,000 restaurants across India and Southeast Asia. Key modules included Offer Management, Barcode Printing, and Wastage management, reducing manual work by 25%. Led frontend performance improvements, cutting page load times by 40% on low-bandwidth networks. Collaborated in Agile sprints with cross-functional teams and co-developed Go-Contactless, enabling 10,000+ safe QR-based transactions during COVID-19.',
       technologies: ['Angular', 'Angular.js', 'Typescript', 'Javascript', 'HTML/CSS'],
     },{
       role: "Bachelor's Degree",
