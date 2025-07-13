@@ -13,6 +13,7 @@ export function Skills() {
         'TypeScript',
         'C',
         'C++',
+        'X86 - Assembly',
       ],
     },{
       title: 'Frontend Development',
@@ -20,10 +21,10 @@ export function Skills() {
       skills: [
         'React',
         'Angular',
-        'Android Studio',
+        'Angular.js',
         'Bootstrap',
         'TailwindCSS',
-        'HTML5/CSS3'
+        'HTML5/CSS3',
       ],
     },{
       title: 'Backend And Database',
@@ -32,10 +33,20 @@ export function Skills() {
         'Node.js',
         'Express',
         'Flask',
-        'REST API Design',
-        'MySQL',
+        'SQL',
         'MongoDB',
-        'Firebase'
+        'Firebase',
+        'RESTful API Design',
+      ],
+    },{
+      title: 'DevOps',
+      icon: <ServerIcon size={24} className="text-purple-400" />,
+      skills: [
+        'Jenkins',
+        'Docker',
+        'AWS',
+        'GitHub',
+        'CI/CD'
       ],
     },{
       title: 'Other Skills',
@@ -45,6 +56,8 @@ export function Skills() {
         'Wireframing',
         'Photoshop',
         'Blender',
+        'Android Studio',
+        'Selenium'
       ],
     }
   ]

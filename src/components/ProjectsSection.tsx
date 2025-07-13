@@ -4,16 +4,16 @@ import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('all');
   const projects = [{
-    title: 'E-Commerce Platform',
+    title: 'ReSello',
     category: 'web',
     image: 'https://github.com/user-attachments/assets/cced1deb-cb99-4f05-bf63-76100bd34982',
-    description: 'A full-featured e-commerce platform with product management, cart, and payment processing.',
+    description: 'A full-featured gadget marketplace with product management, cart, and payment processing.',
     technologies: ['Angular', 'Node.js', 'MongoDB', 'Express'],
     webLink: null,
     gitLink: "https://github.com/amaldevcm/E-Commerce"
   },{
     title: 'FlockFinder',
-    category: 'web',
+    category: 'ai',
     image: 'https://github.com/user-attachments/assets/19d549dd-e8ab-4d7a-b851-b5037b3cca5f',
     description: 'A user-friendly web application that helps users identify and learn about birds through image recognition. FlockFinder leverages deep learning to classify bird species from uploaded images.',
     technologies: ['Flask', 'Python', 'Scikit-learn', 'TensorFlow'],
@@ -23,21 +23,32 @@ export function ProjectsSection() {
     title: 'FarmGo App',
     category: 'app',
     image: 'https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-    description: 'A mobile app to support farmers in achieving fair pricing for their agricultural produce by eliminating the need for middlemen and ensuring transparent transactions',
+    description: 'A mob to support farmers in achieving fair pricing for their agricultural produce by eliminating the need for middlemen and ensuring transparent transactions',
     technologies: ['Android Studio', 'Java', 'Firebase'],
     webLink: null,
     gitLink: "https://github.com/SibiChakravarthy7311/FarmGoApp"
+  },{
+    title: 'Skin Disease Classifier',
+    category: 'ai',
+    image: 'https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+    description: 'Built a CNN model for multi-class skin disease classification using 10,000+ images from the DermNet dataset, achieving 90% validation accuracy through data preprocessing, class balancing, and image augmentation.',
+    technologies: ['Python', 'Deep Learning'],
+    webLink: null,
+    gitLink: null
   }];
 
   const filters = [{
     id: 'all',
     label: 'All Projects'
-  }, {
+  },{
     id: 'web',
     label: 'Web Development'
-  }, {
+  },{
     id: 'app',
     label: 'App Development'
+  },{
+    id: 'ai',
+    label: 'Artificial Intelligence'
   }];
 
   const filteredProjects = activeFilter === 'all' ? projects : projects.filter(project => project.category === activeFilter);
