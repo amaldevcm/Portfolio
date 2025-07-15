@@ -38,7 +38,7 @@ export function HeroSection() {
                 Get in Touch
               </a>
               <a
-                href="https://drive.google.com/file/d/1_tpJA_TCjNqqkmDvE--T5xs63EhtycF3/view?usp=drive_link" target='blank'
+                href="https://drive.google.com/file/d/1s43aCz31PhOghPAyZZM1PE9XZ1PAjhW6/view?usp=drive_link" target='blank'
                 className="px-6 py-3 border border-gray-700 hover:border-indigo-500 rounded-lg font-medium transition-all duration-300 group"
               >
                 Resume
