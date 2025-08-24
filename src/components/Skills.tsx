@@ -1,4 +1,4 @@
-import { CodeIcon, ServerIcon, PenToolIcon, PaletteIcon} from 'lucide-react'
+import { CodeIcon, ServerIcon, PenToolIcon, PaletteIcon } from 'lucide-react'
 
 export function Skills() {
   // Skills grouped by computer science aspects
@@ -15,7 +15,7 @@ export function Skills() {
         'C++',
         'X86 - Assembly',
       ],
-    },{
+    }, {
       title: 'Frontend Development',
       icon: <PaletteIcon size={24} className="text-indigo-400" />,
       skills: [
@@ -26,19 +26,21 @@ export function Skills() {
         'TailwindCSS',
         'HTML5/CSS3',
       ],
-    },{
+    }, {
       title: 'Backend And Database',
       icon: <ServerIcon size={24} className="text-purple-400" />,
       skills: [
         'Node.js',
         'Express',
         'Flask',
+        'Spring-boot',
         'SQL',
+        'PostgreSQL',
         'MongoDB',
         'Firebase',
-        'RESTful API Design',
+        'RESTful API',
       ],
-    },{
+    }, {
       title: 'DevOps',
       icon: <ServerIcon size={24} className="text-purple-400" />,
       skills: [
@@ -48,7 +50,7 @@ export function Skills() {
         'GitHub',
         'CI/CD'
       ],
-    },{
+    }, {
       title: 'Other Skills',
       icon: <PenToolIcon size={24} className="text-pink-400" />,
       skills: [
