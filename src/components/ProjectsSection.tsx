@@ -6,7 +6,7 @@ export function ProjectsSection() {
   const projects = [{
     title: 'ReSello',
     category: 'web',
-    image: 'src/assets/resello.png',
+    image: "/resello.png",
     description: 'A full-featured gadget marketplace with product management, cart, and payment processing.',
     technologies: ['Angular', 'Node.js', 'MongoDB', 'Express'],
     webLink: "https://e-commerce-frontend-17zo.onrender.com/",
@@ -14,7 +14,7 @@ export function ProjectsSection() {
   }, {
     title: 'PayBook',
     category: 'web',
-    image: "src/assets/paybook.png",
+    image: "/paybook.png",
     description: 'A web-first expense tracker application developed using React and spring boot to keep track of my day-to-day expenses',
     technologies: ['React', 'Spring-boot', 'PostgreSQL'],
     webLink: "https://paybook-frontend.onrender.com/",
@@ -22,7 +22,7 @@ export function ProjectsSection() {
   }, {
     title: 'FlockFinder',
     category: 'ai',
-    image: 'src/assets/flockfinder.jpg',
+    image: "/flockfinder.jpg",
     description: 'A web application that helps users identify and learn about birds through image recognition. FlockFinder leverages deep-learning to classify bird species from uploaded images.',
     technologies: ['Flask', 'Python', 'Scikit-learn', 'TensorFlow'],
     webLink: null,
@@ -30,7 +30,7 @@ export function ProjectsSection() {
   }, {
     title: 'FarmGo App',
     category: 'app',
-    image: 'src/assets/mobile-app.jpg',
+    image: '/mobile-app.jpg',
     description: 'A mobile-first application to support farmers in achieving fair pricing for their agricultural produce by eliminating the need for middlemen and ensuring transparent transactions',
     technologies: ['Android Studio', 'Java', 'Firebase'],
     webLink: null,
@@ -38,7 +38,7 @@ export function ProjectsSection() {
   }, {
     title: 'Skin Disease Classifier',
     category: 'ai',
-    image: 'src/assets/AI.jpg',
+    image: '/AI.jpg',
     description: 'Built a CNN model for multi-class skin disease classification using 10,000+ images from the DermNet dataset, achieving 90% validation accuracy through data preprocessing, class balancing, and image augmentation.',
     technologies: ['Python', 'Deep Learning', 'Scikit-learn'],
     webLink: null,
