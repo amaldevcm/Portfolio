@@ -8,37 +8,37 @@ export function Experience() {
       company: 'SUNY Binghamton University',
       period: '2024 - Present',
       type: 'education',
-      description: "● Pursuing a Master’s in Computer Science with a focus on computer vision and systems programming, actively building real-world projects and collaborating on advanced coursework.",
-      technologies: ['Java', 'C', 'Flask', 'Python'],
-    },{
+      description: ["Pursuing a Master’s in Computer Science with a focus on computer vision and systems programming, actively building real-world projects and collaborating on advanced coursework."],
+      technologies: ['Java', 'C', 'Python', 'Computer Vision', 'Design Pattern'],
+    }, {
       role: 'Post graduate program',
       company: 'VIT Bangalore',
       period: '2023 - 2024',
       type: 'education',
-      description: '● Completed a data science certification program focused on data science, AI, Deep learning, and data visulaization tools like PowerBI.',
-      technologies: ['Python', 'Deep Learning', 'ML', 'AI','Tensorflow', 'Scikit-learn', 'Flask', 'PowerBI', 'Tableau'],
-    },{
+      description: ["Completed a data science certification program focused on data science, AI, Deep learning, and data visulaization tools like PowerBI."],
+      technologies: ['Python', 'Deep Learning', 'ML', 'AI', 'Tensorflow', 'Scikit-learn', 'Flask', 'PowerBI', 'Tableau'],
+    }, {
       role: 'Software Developer',
       company: 'Zoho Corporation',
       period: '2023 - 2023',
       type: 'job',
-      description: '● Developed responsive, cross-platform UIs for ServQuick POS, a SaaS web application for the restaurant industry. ● Led implementation of barcode printing and E-Way billing features, enhancing inventory management. ● Fixed 20+ SonarQube-identified security issues and mentored 3+ new team members on workflows and best practices.',
+      description: ["Developed responsive, cross-platform UIs for ServQuick POS, a SaaS web application for the restaurant industry.", "Led implementation of barcode printing and E-Way billing features, enhancing inventory management.", "Fixed 20+ SonarQube-identified security issues and mentored 3+ new team members on workflows and best practices."],
       technologies: ['Angular', 'Angular.js', 'TypeScript', 'Bootstrap', 'Jenkins'],
-    },{
+    }, {
       role: 'Software Developer',
       company: 'Gofrugal Technologies',
       period: '2021 - 2023',
       type: 'job',
-      description: '● Delivered 8+ major features for the ServQuick POS web app using Angular, AngularJS, and Bootstrap, driving a 15% boost in merchant adoption. ● Designed and launched a mobile-first waiter-less ordering app, reducing customer wait times by 10–15 minutes. ● Migrated Angular codebase from v7 to v13, improving build speed by 35% and accelerating releases by 20%. ● Automated regression testing with Selenium, cutting manual QA by 60%, and deployed updates via Jenkins CI/CD to staging environments for testing.',
+      description: ["Delivered 8+ major features for the ServQuick POS web app using Angular, AngularJS, and Bootstrap, driving a 15% boost in merchant adoption.", "Designed and launched a mobile-first waiter-less ordering app, reducing customer wait times by 10–15 minutes.", "Migrated Angular codebase from v7 to v13, improving build speed by 35% and accelerating releases by 20%.", "Automated regression testing with Selenium, cutting manual QA by 60%, and deployed updates via Jenkins CI/CD to staging environments for testing."],
       technologies: ['Angular', 'Angular.js', 'Typescript', 'Bootstrap', 'Jenkins'],
-    },{
+    }, {
       role: "Bachelor's Degree",
       company: 'Dr. Mahalingam College of Engineering and Technology',
       period: '2018 - 2022',
       type: 'education',
-      description: "● Completed my Bachelor's degree in Computer science, building a strong foundation in core computer science concepts through coursework, projects, and hands-on experience.",
+      description: ["Completed my Bachelor's degree in Computer science, building a strong foundation in core computer science concepts through coursework, projects, and hands-on experience."],
       technologies: ['C', 'Java', 'AWS', 'Android Studio'],
-    } 
+    }
   ]
 
   return (
@@ -59,12 +59,12 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline dot  */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-gray-900 z-10"></div>      
+          <div className="sm:hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-gray-900 z-10"></div>
           {/* Timeline center line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500"></div>
-          
+
           <div className="space-y-16 relative">
-            { experiences.map((exp, index) => (
+            {experiences.map((exp, index) => (
               <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-0 items-center`}>
                 {/* Date bubble - mobile only */}
                 <div className="md:hidden bg-gray-800 rounded-full px-4 py-1 text-sm flex items-center gap-1 mb-4">
@@ -78,7 +78,7 @@ export function Experience() {
                     className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 shadow-lg ${index % 2 === 0 ? 'md:rounded-tr-none' : 'md:rounded-tl-none'}`}
                   >
                     <div className="flex items-start gap-3 mb-3">
-                      { exp.type != 'education'?
+                      {exp.type != 'education' ?
                         <BriefcaseIcon className="text-indigo-400 mt-1" size={18} /> :
                         <Book className='text-indigo-400 mt-1' size={18} />
                       }
@@ -87,7 +87,12 @@ export function Experience() {
                         <p className="text-indigo-400">{exp.company}</p>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">{exp.description}</p>
+                    {/* <p className="text-gray-300">{exp.description}</p> */}
+                    <ul className='mb-4' style={{ listStyleType: "disc" }}>
+                      {exp.description.map((desc, i) => (
+                        <li key={'desc_' + i} className="text-gray-300">{desc}</li>
+                      ))}
+                    </ul>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, i) => (
                         <span key={i} className="text-xs bg-gray-700/70 text-gray-300 px-2 py-1 rounded-md"> {tech} </span>
@@ -95,7 +100,7 @@ export function Experience() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Date - desktop only */}
                 <div className="hidden md:flex md:w-2/12 justify-center items-center">
                   <div className="bg-gray-800 rounded-full px-3 py-1 text-sm flex items-center gap-1">

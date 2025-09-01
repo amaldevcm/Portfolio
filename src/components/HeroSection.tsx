@@ -17,11 +17,11 @@ export function HeroSection() {
           <div className="w-full md:w-1/2 space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Hi, I'm{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
-                Amal Dev
-              </span>
-            </h1>
+                Hi, I'm{' '}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
+                  Amal Dev
+                </span>
+              </h1>
             </div>
 
             <p className="text-gray-400 text-lg mb-8">
@@ -61,7 +61,7 @@ export function HeroSection() {
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center">
-            <div className="relative">
+            <div className="relative hidden md:block">
               {/* Developer illustration/avatar placeholder */}
               <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-indigo-600/20 via-purple-600/20 to-transparent border border-indigo-500/20 backdrop-blur-sm flex items-center justify-center">
                 <div className="w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center animate-pulse">
