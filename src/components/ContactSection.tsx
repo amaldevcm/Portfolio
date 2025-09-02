@@ -1,10 +1,27 @@
-import React from "react";
 import { MapPinIcon, MailIcon, PhoneIcon, SendIcon, GithubIcon, Linkedin } from "lucide-react";
+import emailjs from 'emailjs-com'
+
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+
+    emailjs.sendForm(
+      "service_zyaa7mb",
+      "template_47oz3y4",
+      e.target,
+      "SxPWVFMJlaCcKVdER"
+    ).then(
+      (result) => {
+        console.log("Email sent:", result.text);
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.error("Error:", error.text);
+        alert("Failed to send message.");
+      }
+    );
   };
+
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
@@ -118,7 +135,8 @@ export function ContactSection() {
                   </label>
                   <input
                     type="text"
-                    id="name"
+                    id="from_name"
+                    name="from_name"
                     className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white"
                     placeholder="Your name"
                     required
@@ -133,7 +151,8 @@ export function ContactSection() {
                   </label>
                   <input
                     type="email"
-                    id="email"
+                    id="from_email"
+                    name="from_email"
                     className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white"
                     placeholder="Your email"
                     required
@@ -150,6 +169,7 @@ export function ContactSection() {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white"
                   placeholder="Subject"
                   required
@@ -164,6 +184,7 @@ export function ContactSection() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
                   className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white resize-none"
                   placeholder="Your message"
