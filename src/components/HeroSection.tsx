@@ -1,4 +1,4 @@
-import { ArrowDownIcon, GithubIcon, LinkedinIcon, TwitterIcon, } from 'lucide-react';
+import { ArrowDownIcon, GithubIcon, LinkedinIcon, } from 'lucide-react';
 
 export function HeroSection() {
   return (

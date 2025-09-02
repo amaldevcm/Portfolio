@@ -16,7 +16,7 @@ export function ProjectsSection() {
     category: 'web',
     image: "/paybook.png",
     description: 'A web-first expense tracker application developed using React and spring boot to keep track of my day-to-day expenses',
-    technologies: ['React', 'Spring-boot', 'PostgreSQL'],
+    technologies: ['React', 'Spring-boot', 'PostgreSQL', 'Hibernate'],
     webLink: "https://paybook-frontend.onrender.com/",
     gitLink: "https://github.com/amaldevcm/Paybook"
   }, {
@@ -28,6 +28,14 @@ export function ProjectsSection() {
     webLink: null,
     gitLink: "https://github.com/amaldevcm/FlockFinder"
   }, {
+    title: 'Resume Grader',
+    category: 'ai',
+    image: '/resume_grader.png',
+    description: 'An LLM integrated web application used to score your resume against any job description and get suggestions to improve the score.',
+    technologies: ['Flask', 'Python', 'LLM', 'Groq', 'Llama3'],
+    webLink: null,
+    gitLink: "https://github.com/amaldevcm/Resume-Grader"
+  }, {
     title: 'FarmGo App',
     category: 'app',
     image: '/mobile-app.jpg',
@@ -35,6 +43,14 @@ export function ProjectsSection() {
     technologies: ['Android Studio', 'Java', 'Firebase'],
     webLink: null,
     gitLink: "https://github.com/SibiChakravarthy7311/FarmGoApp"
+  }, {
+    title: 'Career Compass App',
+    category: 'app',
+    image: '/mobile-app.jpg',
+    description: 'A user-friendly Android mobile app designed to guide high school students in exploring potential engineering career paths.',
+    technologies: ['Android Studio', 'Java', 'Firebase'],
+    webLink: null,
+    gitLink: "https://github.com/amaldevcm/CareerCompass"
   }, {
     title: 'Skin Disease Classifier',
     category: 'ai',
