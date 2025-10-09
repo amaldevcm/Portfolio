@@ -22,21 +22,35 @@ export function Experience() {
       company: 'Zoho Corporation',
       period: '2023 - 2023',
       type: 'job',
-      description: ["Developed responsive, cross-platform UIs for ServQuick POS, a SaaS web application for the restaurant industry.", "Led implementation of barcode printing and E-Way billing features, enhancing inventory management.", "Fixed 20+ SonarQube-identified security issues and mentored 3+ new team members on workflows and best practices."],
+      description: [
+        "Developed responsive user interfaces with cross-browser compatibility for the ServQuick POS using Angular, AngularJS, Javascript(ES6), Typescript, and Bootstrap, achieving seamless functionality across modern browsers and devices",
+        "Spearheaded the development of key features like Barcode printing and EWay billing taking product ownership from design through deployment and optimizing workflows to improve customer experience",
+        "Resolved 50+ security vulnerabilities identified via SonarQube, coordinating with senior engineers and security analysts tomaintain codebase integrity",
+        "Led Angular migration from v7 to v13, resolving 50+ UI bugs and reducing application crashes by 40%, ensuring long-term maintainability of customer-facing apps",
+        "Mentored 3+ new team members, guiding them on front-end architecture, accessibility, and coding standards",
+      ],
       technologies: ['Angular', 'Angular.js', 'TypeScript', 'Bootstrap', 'Jenkins'],
     }, {
       role: 'Software Developer',
       company: 'Gofrugal Technologies',
       period: '2021 - 2023',
       type: 'job',
-      description: ["Delivered 8+ major features for the ServQuick POS web app using Angular, AngularJS, and Bootstrap, driving a 15% boost in merchant adoption.", "Designed and launched a mobile-first waiter-less ordering app, reducing customer wait times by 10–15 minutes.", "Migrated Angular codebase from v7 to v13, improving build speed by 35% and accelerating releases by 20%.", "Automated regression testing with Selenium, cutting manual QA by 60%, and deployed updates via Jenkins CI/CD to staging environments for testing."],
+      description: [
+        "Designed 10+ production-ready UI features for ServQuick (ServeEasy OnCloud), a SaaS POS used by 1,500+ restaurants globally, directly impacting 2,000+ daily active users and streamlining in-store operations",
+        "Delivered a mobile-first waiterless ordering app called Go-Contactless, handling 1,000+ daily customer orders and reducing wait times by 25%, boosting adoption among restaurant clients",
+        "Integrated 20+ RESTful and WebSocket APIs into ServQuick, KDS, and CDS to enable real-time order synchronization (<1s latency), improving kitchen order accuracy and cutting missed orders by 15%",
+        "Performed cross-browser & cross-device testing on 50+ test cases per feature release, reducing UI defects reported by QA by 30% and accelerating release cycles by 20%",
+        "Implemented unit and integration testing coverage for all owned features, improving reliability and reducing post-release hotfixes by 25%"
+      ],
       technologies: ['Angular', 'Angular.js', 'Typescript', 'Bootstrap', 'Jenkins'],
     }, {
       role: "Bachelor's Degree",
       company: 'Dr. Mahalingam College of Engineering and Technology',
       period: '2018 - 2022',
       type: 'education',
-      description: ["Completed my Bachelor's degree in Computer science, building a strong foundation in core computer science concepts through coursework, projects, and hands-on experience."],
+      description: [
+        "Completed my Bachelor's degree in Computer science, building a strong foundation in core computer science concepts through coursework, projects, and hands-on experience."
+      ],
       technologies: ['C', 'Java', 'AWS', 'Android Studio'],
     }
   ]
@@ -59,7 +73,7 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline dot  */}
-          <div className="sm:hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-gray-900 z-10"></div>
+          <div className="sm:hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-gray-900 z-10"></div>
           {/* Timeline center line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500"></div>
 

@@ -20,6 +20,14 @@ export function ProjectsSection() {
     webLink: "https://paybook-frontend.onrender.com/",
     gitLink: "https://github.com/amaldevcm/Paybook"
   }, {
+    title: 'Resume Grader',
+    category: 'ai',
+    image: '/resume_grader.png',
+    description: 'An LLM integrated web application used to score your resume against any job description and get suggestions to improve the score.',
+    technologies: ['Flask', 'Python', 'LLM', 'Groq', 'Llama3'],
+    webLink: "https://resume-grader-8s7f.onrender.com/",
+    gitLink: "https://github.com/amaldevcm/Resume-Grader"
+  }, {
     title: 'FlockFinder',
     category: 'ai',
     image: "/flockfinder.jpg",
@@ -27,14 +35,6 @@ export function ProjectsSection() {
     technologies: ['Flask', 'Python', 'Scikit-learn', 'TensorFlow'],
     webLink: null,
     gitLink: "https://github.com/amaldevcm/FlockFinder"
-  }, {
-    title: 'Resume Grader',
-    category: 'ai',
-    image: '/resume_grader.png',
-    description: 'An LLM integrated web application used to score your resume against any job description and get suggestions to improve the score.',
-    technologies: ['Flask', 'Python', 'LLM', 'Groq', 'Llama3'],
-    webLink: null,
-    gitLink: "https://github.com/amaldevcm/Resume-Grader"
   }, {
     title: 'FarmGo App',
     category: 'app',
