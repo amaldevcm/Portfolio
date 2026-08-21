@@ -76,46 +76,46 @@ export function ProjectsSection() {
   }];
 
   const filteredProjects = activeFilter === 'all' ? projects : projects.filter(project => project.category === activeFilter);
-  return <section id="projects" className="py-20 bg-gray-800">
+  return <section id="projects" className="py-20">
     <div className="container mx-auto px-4">
       <div className="text-center mb-16">
+        <p className="font-mono text-accent text-sm mb-2">04. Work</p>
         <h2 className="text-3xl font-bold mb-2">My Projects</h2>
-        <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mb-6"></div>
-        <p className="max-w-2xl mx-auto text-gray-400">
+        <p className="max-w-2xl mx-auto text-slate-400">
           Check out some of my recent work. I've worked on a variety of
           projects, from web applications to mobile apps and UI design.
         </p>
       </div>
       <div className="flex justify-center mb-12">
-        <div className="inline-flex flex-wrap justify-center gap-2">
-          {filters.map(filter => <button key={filter.id} onClick={() => setActiveFilter(filter.id)} className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeFilter === filter.id ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>
+        <div className="inline-flex flex-wrap justify-center gap-2 font-mono text-sm">
+          {filters.map(filter => <button key={filter.id} onClick={() => setActiveFilter(filter.id)} className={`px-4 py-2 rounded-full font-medium transition-colors ${activeFilter === filter.id ? 'bg-accent text-slate-950' : 'bg-slate-800/70 text-slate-300 hover:bg-slate-800'}`}>
             {filter.label}
           </button>)}
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project, index) => <div key={index} className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-gray-600 transition-all hover:-translate-y-1">
+        {filteredProjects.map((project, index) => <div key={index} className="bg-slate-900/60 rounded-lg overflow-hidden border border-slate-800 hover:border-accent/40 transition-all hover:-translate-y-1">
           <div className="h-48 overflow-hidden">
             <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform hover:scale-105" />
           </div>
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.technologies.map((tech, index) => <span key={index} className="px-2 py-1 bg-gray-800 text-xs rounded text-gray-300">
+            <p className="text-slate-400 mb-4">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-6 font-mono">
+              {project.technologies.map((tech, index) => <span key={index} className="px-2 py-1 bg-slate-800/80 text-xs rounded text-slate-300">
                 {tech}
               </span>)}
             </div>
             <div className="flex justify-between">
               {project.gitLink &&
-                <a href={project.gitLink} className="text-purple-400 hover:text-purple-300 flex items-center gap-1 text-sm" target='blank'>
+                <a href={project.gitLink} className="text-slate-300 hover:text-accent flex items-center gap-1 text-sm transition-colors" target='_blank' rel='noreferrer'>
                   <GithubIcon size={16} />
                   Source Code
                 </a>
               }
 
               {project.webLink &&
-                <a href={project.webLink} className="text-cyan-400 hover:text-cyan-300 flex items-center gap-1 text-sm" target='blank'>
+                <a href={project.webLink} className="text-accent hover:text-accent-soft flex items-center gap-1 text-sm transition-colors" target='_blank' rel='noreferrer'>
                   <ExternalLinkIcon size={16} />
                   Live Demo
                 </a>

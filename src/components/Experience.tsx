@@ -68,15 +68,11 @@ export function Experience() {
 
   return (
     <section id="experience" className="py-24 relative">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-indigo-600/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full filter blur-3xl"></div>
-      </div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">My Journey</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+          <p className="font-mono text-accent text-sm mb-2">02. Journey</p>
+          <h2 className="text-3xl font-bold mb-4">Experience &amp; Education</h2>
+          <p className="mt-2 text-slate-400 max-w-2xl mx-auto">
             A chronological exploration of my career path and professional
             growth in the software development industry.
           </p>
@@ -84,43 +80,40 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline dot  */}
-          <div className="sm:hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-gray-900 z-10"></div>
+          <div className="sm:hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-slate-950 z-10"></div>
           {/* Timeline center line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-slate-800"></div>
 
           <div className="space-y-16 relative">
             {experiences.map((exp, index) => (
               <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-0 items-center`}>
                 {/* Date bubble - mobile only */}
-                <div className="md:hidden bg-gray-800 rounded-full px-4 py-1 text-sm flex items-center gap-1 mb-4">
+                <div className="md:hidden font-mono bg-slate-900 border border-slate-800 rounded-full px-4 py-1 text-sm flex items-center gap-1 mb-4 text-slate-400">
                   <CalendarIcon size={12} />
                   <span>{exp.period}</span>
                 </div>
 
                 {/* Content card */}
                 <div className="w-full md:w-5/12 md:px-8">
-                  <div
-                    className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 shadow-lg ${index % 2 === 0 ? 'md:rounded-tr-none' : 'md:rounded-tl-none'}`}
-                  >
+                  <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 hover:border-accent/40 transition-colors duration-200">
                     <div className="flex items-start gap-3 mb-3">
                       {exp.type != 'education' ?
-                        <BriefcaseIcon className="text-indigo-400 mt-1" size={18} /> :
-                        <Book className='text-indigo-400 mt-1' size={18} />
+                        <BriefcaseIcon className="text-accent mt-1" size={18} /> :
+                        <Book className='text-accent mt-1' size={18} />
                       }
                       <div>
                         <h3 className="font-bold text-lg">{exp.role}</h3>
-                        <p className="text-indigo-400">{exp.company}</p>
+                        <p className="text-accent">{exp.company}</p>
                       </div>
                     </div>
-                    {/* <p className="text-gray-300">{exp.description}</p> */}
                     <ul className='mb-4' style={{ listStyleType: "disc" }}>
                       {exp.description.map((desc, i) => (
-                        <li key={'desc_' + i} className="text-gray-300">{desc}</li>
+                        <li key={'desc_' + i} className="text-slate-300">{desc}</li>
                       ))}
                     </ul>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 font-mono">
                       {exp.technologies.map((tech, i) => (
-                        <span key={i} className="text-xs bg-gray-700/70 text-gray-300 px-2 py-1 rounded-md"> {tech} </span>
+                        <span key={i} className="text-xs bg-slate-800/80 text-slate-300 px-2 py-1 rounded-md"> {tech} </span>
                       ))}
                     </div>
                   </div>
@@ -128,7 +121,7 @@ export function Experience() {
 
                 {/* Date - desktop only */}
                 <div className="hidden md:flex md:w-2/12 justify-center items-center">
-                  <div className="bg-gray-800 rounded-full px-3 py-1 text-sm flex items-center gap-1">
+                  <div className="font-mono bg-slate-900 border border-slate-800 rounded-full px-3 py-1 text-sm flex items-center gap-1 text-slate-400">
                     <CalendarIcon size={12} />
                     <span>{exp.period}</span>
                   </div>
@@ -139,7 +132,7 @@ export function Experience() {
             ))}
           </div>
           {/* Timeline dot  */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-600 rounded-full border-4 border-gray-900 z-10"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-slate-950 z-10"></div>
         </div>
       </div>
     </section>

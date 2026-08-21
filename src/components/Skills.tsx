@@ -5,7 +5,7 @@ export function Skills() {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      icon: <CodeIcon size={24} className="text-indigo-400" />,
+      icon: <CodeIcon size={22} className="text-accent" />,
       skills: [
         'Java',
         'Python',
@@ -17,7 +17,7 @@ export function Skills() {
       ],
     }, {
       title: 'Frontend Development',
-      icon: <PaletteIcon size={24} className="text-indigo-400" />,
+      icon: <PaletteIcon size={22} className="text-accent" />,
       skills: [
         'React',
         'Angular',
@@ -28,7 +28,7 @@ export function Skills() {
       ],
     }, {
       title: 'Backend And Database',
-      icon: <ServerIcon size={24} className="text-purple-400" />,
+      icon: <ServerIcon size={22} className="text-accent" />,
       skills: [
         'Node.js',
         'Express',
@@ -42,7 +42,7 @@ export function Skills() {
       ],
     }, {
       title: 'DevOps',
-      icon: <ServerIcon size={24} className="text-purple-400" />,
+      icon: <ServerIcon size={22} className="text-accent" />,
       skills: [
         'Jenkins',
         'Docker',
@@ -52,7 +52,7 @@ export function Skills() {
       ],
     }, {
       title: 'Other Skills',
-      icon: <PenToolIcon size={24} className="text-pink-400" />,
+      icon: <PenToolIcon size={22} className="text-accent" />,
       skills: [
         'Figma',
         'Wireframing',
@@ -64,38 +64,33 @@ export function Skills() {
     }
   ]
   return (
-    <section id="skills" className="py-24 bg-gray-900/50 relative">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-indigo-600/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-purple-600/10 rounded-full filter blur-3xl"></div>
-      </div>
+    <section id="skills" className="py-24 bg-slate-900/40 relative">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
+          <p className="font-mono text-accent text-sm mb-2">03. Toolbox</p>
           <h2 className="text-3xl font-bold mb-4">Technical Expertise</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+          <p className="mt-2 text-slate-400 max-w-2xl mx-auto">
             My skills are organized by computer science domains, showcasing the
             breadth and depth of my technical capabilities.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-800/40 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300 group"
+              className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 hover:border-accent/40 transition-colors duration-200"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-gray-700/50 rounded-lg group-hover:bg-indigo-500/20 transition-colors duration-300">
+                <div className="p-2 bg-slate-800/70 rounded-lg">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold">{category.title}</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 font-mono">
                 {category.skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-gray-700/50 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-indigo-500/30 transition-colors duration-300"
+                    className="inline-block bg-slate-800/70 text-slate-300 px-3 py-1 rounded-md text-sm hover:text-accent transition-colors duration-200"
                   >
                     {skill}
                   </span>

@@ -10,7 +10,7 @@ import { Skills } from './components/Skills';
 
 
 export function App() {
-  return <div className="bg-gray-900 text-gray-100 min-h-screen">
+  return <div className="bg-slate-950 text-slate-100 min-h-screen">
     <Header />
     <main>
       <HeroSection />

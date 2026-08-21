@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { MenuIcon, XIcon } from 'lucide-react';
 
+const NAV_ITEMS = ['Home', 'About', 'Experience', 'Skills', 'Projects', 'Contact'];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -8,39 +10,55 @@ export function Header() {
   };
 
   return (
-    <header className="w-dvw fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-800">
+    <header className="w-full fixed top-0 left-0 right-0 bg-slate-950/85 backdrop-blur-sm z-50 border-b border-slate-800">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
-            Portfolio
-          </span>
-        </div>
+        <a href="#home" className="flex items-center gap-2 font-mono text-lg">
+          <img src="/logo.svg" alt="" className="w-7 h-7 rounded-md" />
+          <span className="font-semibold text-slate-100">amal.dev</span>
+        </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          {['Home', 'About', 'Experience', 'Skills', 'Projects', 'Contact'].map(item =>
-            <a key={item} href={`#${item.toLowerCase()}`}
-              className="text-gray-300 hover:text-white transition-colors duration-200">
+        <nav className="hidden md:flex items-center space-x-1 font-mono text-sm">
+          {NAV_ITEMS.map(item => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="px-3 py-2 text-slate-400 hover:text-accent transition-colors duration-200"
+            >
               {item}
-            </a>)}
+            </a>
+          ))}
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-gray-300 hover:text-white focus:outline-none" onClick={toggleMenu}>
+        <button
+          className="md:hidden text-slate-300 hover:text-accent focus:outline-none"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
           {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      {isMenuOpen && <div className="md:hidden bg-gray-800 border-t border-gray-700">
-        <div className="container mx-auto px-4 py-2">
-          <nav className="flex flex-col space-y-3 py-3">
-            {['Home', 'About', 'Experience', 'Skills', 'Projects', 'Contact'].map(item => <a key={item} href={`#${item.toLowerCase()}`} className="text-gray-300 hover:text-white transition-colors duration-200 py-2" onClick={() => setIsMenuOpen(false)}>
-              {item}
-            </a>)}
-          </nav>
+      {isMenuOpen && (
+        <div className="md:hidden bg-slate-900 border-t border-slate-800">
+          <div className="container mx-auto px-4 py-2">
+            <nav className="flex flex-col space-y-1 py-3 font-mono text-sm">
+              {NAV_ITEMS.map(item => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-slate-300 hover:text-accent transition-colors duration-200 py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
-      </div>}
+      )}
     </header>
   );
 }
