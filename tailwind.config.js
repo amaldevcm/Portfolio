@@ -7,13 +7,13 @@ export default {
     extend: {
       colors: {
         accent: {
-          DEFAULT: '#34D399',
-          soft: '#6EE7B7',
-          strong: '#10B981',
+          DEFAULT: '#ff7a5c',
+          soft: '#ffb4a3',
+          strong: '#a73921',
         },
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       backgroundImage: {

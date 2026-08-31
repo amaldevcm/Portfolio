@@ -10,20 +10,23 @@ export function Header() {
   };
 
   return (
-    <header className="w-full fixed top-0 left-0 right-0 bg-slate-950/85 backdrop-blur-sm z-50 border-b border-slate-800">
+    <header className="w-full fixed top-0 left-0 right-0 bg-slate-950/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" className="flex items-center gap-2 font-mono text-lg">
-          <img src="/logo.svg" alt="" className="w-7 h-7 rounded-md" />
-          <span className="font-semibold text-slate-100">amal.dev</span>
+        <a href="#home" className="font-bold text-2xl md:text-[32px] text-slate-100">
+          Amal.dev
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1 font-mono text-sm">
-          {NAV_ITEMS.map(item => (
+        <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium">
+          {NAV_ITEMS.map((item, index) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="px-3 py-2 text-slate-400 hover:text-accent transition-colors duration-200"
+              className={
+                index === 0
+                  ? 'text-accent font-bold active:scale-95 transition-transform duration-200'
+                  : 'text-slate-100/70 hover:text-accent transition-colors duration-300'
+              }
             >
               {item}
             </a>
@@ -44,7 +47,7 @@ export function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-slate-900 border-t border-slate-800">
           <div className="container mx-auto px-4 py-2">
-            <nav className="flex flex-col space-y-1 py-3 font-mono text-sm">
+            <nav className="flex flex-col space-y-1 py-3 text-[15px] font-medium">
               {NAV_ITEMS.map(item => (
                 <a
                   key={item}

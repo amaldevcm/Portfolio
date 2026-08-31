@@ -1,6 +1,14 @@
 import { MapPinIcon, MailIcon, PhoneIcon, SendIcon, GithubIcon, Linkedin } from "lucide-react";
 import emailjs from 'emailjs-com'
 
+const CONTACT_ITEMS = [
+  { icon: MapPinIcon, label: 'Binghamton, New York', href: null },
+  { icon: MailIcon, label: 'amalcheepramail@gmail.com', href: 'mailto:amalcheepramail@gmail.com' },
+  { icon: PhoneIcon, label: '+1 (607) 352-0414', href: 'tel:+16073520414' },
+  { icon: GithubIcon, label: 'Github', href: 'https://github.com/amaldevcm' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/amaldevcm' },
+];
+
 export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,176 +31,98 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <p className="font-mono text-accent text-sm mb-2">05. Contact</p>
-          <h2 className="text-3xl font-bold mb-2">Get In Touch</h2>
-          <p className="max-w-2xl mx-auto text-slate-400">
-            Have a project in mind or just want to say hello? Feel
-            free to reach out to me. I'm always open to discussing
-            new projects and opportunities.
-          </p>
-        </div>
+    <section id="contact" className="py-24">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left: header & intro */}
+          <div className="flex flex-col justify-center">
+            <div className="mb-8">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="h-0.5 w-16 bg-accent"></div>
+                <span className="font-mono text-xs text-slate-400 tracking-widest uppercase">Contacts</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-100 mb-4">
+                Have a project?
+                <br />
+                Let&apos;s talk!
+              </h2>
+              <p className="text-lg text-slate-400 max-w-md">
+                Have a project in mind or just want to say hello? Feel free to reach out to me.
+                I&apos;m always open to discussing new projects and opportunities.
+              </p>
+            </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center">
-                  <MapPinIcon
-                    className="text-accent"
-                    size={22}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-1">
-                    Location
-                  </h3>
-                  <p className="text-slate-400">
-                    Binghamton, New York
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center">
-                  <MailIcon
-                    className="text-accent"
-                    size={22}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-1">
-                    Email
-                  </h3>
-                  <p className="text-slate-400">
-                    amalcheepramail@gmail.com
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center">
-                  <PhoneIcon
-                    className="text-accent"
-                    size={22}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-1">
-                    Phone
-                  </h3>
-                  <p className="text-slate-400">
-                    +1 (607) 352-0414
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center">
-                  <GithubIcon
-                    className="text-accent"
-                    size={22}
-                  />
-                </div>
-                <div>
-                  <a className="text-lg font-medium mb-1 hover:text-accent transition-colors" href="https://github.com/amaldevcm" target="_blank" rel="noreferrer">
-                    Github
+            <div className="flex flex-col gap-4">
+              {CONTACT_ITEMS.map(({ icon: Icon, label, href }) =>
+                href ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                    className="flex items-center gap-4 text-slate-400 hover:text-accent transition-colors w-fit"
+                  >
+                    <Icon size={20} className="text-accent" />
+                    <span>{label}</span>
                   </a>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-slate-900 border border-slate-800 rounded-lg flex items-center justify-center">
-                  <Linkedin
-                    className="text-accent"
-                    size={22}
-                  />
-                </div>
-                <div className="items-center">
-                  <a className="text-lg font-medium mb-1 hover:text-accent transition-colors" href="https://www.linkedin.com/in/amaldevcm" target="_blank" rel="noreferrer">
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
+                ) : (
+                  <div key={label} className="flex items-center gap-4 text-slate-400 w-fit">
+                    <Icon size={20} className="text-accent" />
+                    <span>{label}</span>
+                  </div>
+                )
+              )}
             </div>
           </div>
 
-          <div className="lg:col-span-2">
-            <form
-              onSubmit={handleSubmit}
-              className="bg-slate-900/60 p-8 rounded-lg border border-slate-800"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label
-                    htmlFor="from_name"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="from_name"
-                    name="from_name"
-                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-lg focus:outline-none focus:border-accent text-white"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="from_email"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="from_email"
-                    name="from_email"
-                    className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-lg focus:outline-none focus:border-accent text-white"
-                    placeholder="Your email"
-                    required
-                  />
-                </div>
+          {/* Right: form */}
+          <div className="bg-slate-900/60 p-8 rounded-lg border border-slate-800 shadow-2xl shadow-black/40 relative overflow-hidden">
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-8 relative z-10">
+              <div>
+                <input
+                  type="text"
+                  id="from_name"
+                  name="from_name"
+                  className="w-full bg-transparent border-0 border-b border-slate-700 py-3 focus:outline-none focus:border-accent text-slate-100 placeholder:text-slate-500 transition-colors"
+                  placeholder="Name"
+                  required
+                />
               </div>
-              <div className="mb-6">
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Subject
-                </label>
+              <div>
+                <input
+                  type="email"
+                  id="from_email"
+                  name="from_email"
+                  className="w-full bg-transparent border-0 border-b border-slate-700 py-3 focus:outline-none focus:border-accent text-slate-100 placeholder:text-slate-500 transition-colors"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-lg focus:outline-none focus:border-accent text-white"
+                  className="w-full bg-transparent border-0 border-b border-slate-700 py-3 focus:outline-none focus:border-accent text-slate-100 placeholder:text-slate-500 transition-colors"
                   placeholder="Subject"
                   required
                 />
               </div>
-              <div className="mb-6">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Message
-                </label>
+              <div className="h-32">
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
-                  className="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-lg focus:outline-none focus:border-accent text-white resize-none"
-                  placeholder="Your message"
+                  className="w-full h-full resize-none bg-transparent border-0 border-b border-slate-700 py-3 focus:outline-none focus:border-accent text-slate-100 placeholder:text-slate-500 transition-colors"
+                  placeholder="Message"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="px-6 py-3 bg-accent text-slate-950 rounded-lg font-semibold hover:bg-accent-soft transition-colors flex items-center gap-2"
+                className="self-start bg-accent text-slate-950 font-bold px-8 py-3 rounded hover:bg-accent-soft transition-colors duration-300 shadow-lg shadow-accent/20 hover:scale-105 active:scale-95 transform flex items-center gap-2"
               >
-                Send Message
+                Submit
                 <SendIcon size={18} />
               </button>
             </form>
