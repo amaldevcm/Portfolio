@@ -1,6 +1,6 @@
 import { GithubIcon, LinkedinIcon } from 'lucide-react';
 
-const TECH_STACK = ['React', 'TypeScript', 'Python', 'FastAPI', 'AWS', 'WebSocket', 'Java'];
+const TECH_STACK = ['React', 'TypeScript', 'Python', 'Java', 'AWS', 'GenAI / RAG', 'React Native'];
 
 export function HeroSection() {
   return (
@@ -27,7 +27,7 @@ export function HeroSection() {
           </div>
 
           <p className="text-slate-400 text-lg max-w-md">
-            I ship production APIs, web and mobile experiences, and data platforms across healthcare tech and enterprise SaaS. Currently finishing my MS in Computer Science degree from Binghamton University, SUNY.
+            I build APIs, GenAI pipelines, and web and mobile apps. I'm a Software Development Engineer at Neo Health, a health-tech startup, and before that I worked on restaurant POS software at GoFrugal.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -92,8 +92,8 @@ export function HeroSection() {
             <div className="p-5 font-mono text-sm leading-relaxed">
               <p><span className="text-purple-400">const</span> <span className="text-sky-300">engineer</span> = &#123;</p>
               <p className="pl-4"><span className="text-sky-300">name</span>: <span className="text-accent">'Amal Dev'</span>,</p>
-              <p className="pl-4"><span className="text-sky-300">stack</span>: [<span className="text-accent">'React'</span>, <span className="text-accent">'FastAPI'</span>, <span className="text-accent">'AWS'</span>],</p>
-              <p className="pl-4"><span className="text-sky-300">focus</span>: <span className="text-accent">'Real-Time Systems'</span>,</p>
+              <p className="pl-4"><span className="text-sky-300">stack</span>: [<span className="text-accent">'React'</span>, <span className="text-accent">'Python'</span>, <span className="text-accent">'AWS'</span>],</p>
+              <p className="pl-4"><span className="text-sky-300">focus</span>: <span className="text-accent">'GenAI & RAG'</span>,</p>
               <p className="pl-4"><span className="text-sky-300">location</span>: <span className="text-accent">'New York'</span>,</p>
               <p>&#125;;</p>
             </div>

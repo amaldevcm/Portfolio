@@ -2,8 +2,24 @@ import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
 
 export function ProjectsSection() {
   const projects = [{
+    title: 'Multi-Source Review Research Agent',
+    subtitle: 'GenAI MCP Server',
+    description: 'An MCP server with 6 tools. Give it a company and it searches 9 review sources in parallel, then writes a single Markdown report that the client\'s own model summarizes through MCP sampling. If Tavily fails it falls back to Brave, then DuckDuckGo. Pages are cached for 7 days and runs can resume.',
+    technologies: ['TypeScript', 'Node.js', 'MCP'],
+    webLink: null,
+    gitLink: 'https://github.com/amaldevcm/Reputation-Scout',
+    filename: 'research_agent.ts',
+    code: [
+      [{ t: 'async function', c: 'text-purple-400' }, { t: ' researchCompany(', c: 'text-sky-300' }, { t: 'name: string) {', c: 'text-slate-300' }],
+      [{ t: '  const sources = await Promise.all(', c: 'text-slate-300' }],
+      [{ t: '    reviewSites.map(fetchWithFallback)', c: 'text-slate-300' }],
+      [{ t: '  );', c: 'text-slate-300' }],
+      [{ t: '  ', c: '' }, { t: 'return', c: 'text-purple-400' }, { t: ' sampleReport(sources);  ', c: 'text-slate-300' }, { t: '// 9 sources', c: 'text-slate-500' }],
+      [{ t: '}', c: 'text-slate-300' }],
+    ],
+  }, {
     title: 'Adaptive Meal Planning Engine',
-    description: 'A constraint-aware meal planning engine that reconciles dietary restrictions, pantry inventory, and LLM-generated recipes into one weekly plan. A semantic caching layer that detects near-duplicate prompts cut LLM response latency and cost by 40%.',
+    description: 'Plans a week of meals around your dietary restrictions and what is already in your pantry, using LLM-generated recipes. A semantic cache catches near-duplicate prompts, which cut LLM latency and cost by 40%.',
     technologies: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'LLM'],
     webLink: 'https://meal-plan-generator-frontend.onrender.com/',
     gitLink: null,
@@ -19,9 +35,9 @@ export function ProjectsSection() {
     ],
   }, {
     title: 'ResumeForge',
-    subtitle: 'RAG Document Pipeline',
-    description: 'A hybrid retrieval pipeline combining Pinecone vector search with PostgreSQL structured filtering to avoid pure-embedding false positives, lifting match relevance 40% over a naive similarity-search baseline.',
-    technologies: ['FastAPI', 'React', 'TypeScript', 'PostgreSQL', 'Pinecone'],
+    subtitle: 'Retrieval-Augmented Resume-Job Matching',
+    description: 'Upload a few versions of your resume and paste a job description. It embeds each version with sentence-transformers, stores them in Pinecone, and picks the closest match by cosine similarity. A Groq-hosted LLM then writes a tailored resume and cover letter. The backend is a Flask REST API with OAuth and PostgreSQL.',
+    technologies: ['React', 'TypeScript', 'Flask', 'PostgreSQL', 'Pinecone', 'Groq'],
     webLink: null,
     gitLink: 'https://github.com/amaldevcm/ResumeForge',
     filename: 'retrieval.py',
@@ -45,7 +61,7 @@ export function ProjectsSection() {
             Projects<span className="text-accent">.</span>
           </h2>
           <p className="max-w-2xl mx-auto text-slate-400 mt-2">
-            A couple of things I've built end-to-end, from schema to shipped UI.
+            Side projects I built myself, database through UI.
           </p>
         </div>
 
@@ -126,6 +142,21 @@ export function ProjectsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mt-20 text-center">
+          <p className="font-mono text-xs text-slate-400 tracking-widest uppercase mb-2">Open Source</p>
+          <p className="text-slate-400">
+            <a
+              href="https://github.com/apache/maka/pull/4281"
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent hover:text-accent-soft transition-colors font-semibold"
+            >
+              Apache Maka (Incubating)
+            </a>
+: I wrote documentation for this TypeScript AI-agent workspace, and the maintainers merged it.
+          </p>
         </div>
       </div>
     </section>

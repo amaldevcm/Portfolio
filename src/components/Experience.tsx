@@ -13,30 +13,38 @@ type ExperienceEntry = {
 
 const experiences: ExperienceEntry[] = [
   {
+    role: 'Software Development Engineer 1',
+    company: 'Neo Health',
+    period: 'Aug 2026 - Present',
+    description:
+      "Built a RAG pipeline that gives the ChatBot each user's health data so its messages are personal. Also generated 2,600 branded recipe images in batch and wrote LLM evals that took the pass rate from 80% to 95%.",
+    technologies: ['Python', 'GenAI', 'RAG', 'xAI Grok', 'AWS Lambda', 'AWS S3', 'SQL', 'LLM Eval'],
+    insight: {
+      icon: CpuIcon,
+      title: 'GenAI RAG Pipeline',
+      description: "The ChatBot pulls in each user's Apple Health and macro data as context before it writes a message.",
+    },
+  },
+  {
     role: 'Software Development Engineer Intern',
     company: 'Neo Health',
     period: 'Jun 2026 - Aug 2026',
     description:
-      "Joined as an early engineer during this seed-stage health-tech startup's 0-to-1 build, owning features end-to-end from design through launch and shipping 3 production features that drove 40%+ user retention. Partnered with product and design on a macros-tracking feature built with React Native, TanStack Query, and Zustand, and designed a secure OAuth + Cognito data-sync architecture integrating Apple HealthKit and Health Connect.",
-    technologies: ['React Native', 'TanStack Query', 'Zustand', 'AWS Lambda', 'Bedrock', 'DynamoDB', 'Cognito', 'AstroJS', 'Playwright'],
-    insight: {
-      icon: CpuIcon,
-      title: 'Bedrock Orchestration',
-      description: 'Built a Lambda/Bedrock layer generating personalized macro targets on DynamoDB, cutting redundant network calls by 30%.',
-    },
+      "Built the Apple HealthKit integration in React Native on a serverless AWS backend, plus a Lambda API that tracks each user's macros against their targets.",
+    technologies: ['React Native', 'Expo', 'AWS Lambda', 'AWS SAM', 'PostgreSQL', 'HealthKit', 'Astro', 'Tailwind CSS'],
   },
   {
     role: "Master's degree",
     company: 'SUNY Binghamton University',
     period: 'Aug 2024 - Aug 2026',
-    description: "Pursuing a Master's in Computer Science, building on production experience with coursework in distributed systems and advanced algorithms.",
+    description: "Master's in Computer Science, with coursework in distributed systems and advanced algorithms.",
     technologies: ['Java', 'C', 'Python', 'Distributed Systems'],
   },
   {
-    role: 'Post Graduate Data Science Certification',
+    role: 'Post Graduate Program in Data Science',
     company: 'Vellore Institute of Technology (VIT)',
-    period: 'Aug 2023 - Jun 2024',
-    description: 'Completed a certification in statistical modeling and machine learning, covering deep learning and data visualization tools like PowerBI.',
+    period: 'Aug 2023 - Jul 2024',
+    description: 'Statistical modeling and machine learning, including deep learning and data visualization in PowerBI.',
     technologies: ['Python', 'Deep Learning', 'ML', 'Statistical Modeling'],
   },
   {
@@ -44,12 +52,12 @@ const experiences: ExperienceEntry[] = [
     company: 'GoFrugal (a Zoho Company)',
     period: 'Sep 2021 - Aug 2023',
     description:
-      'Designed and built a real-time Kitchen Display System for Servquick, a cloud POS/ERP platform serving 500+ restaurant clients globally, holding up under 100+ concurrent orders at peak service. Independently led the Go-Contactless ordering app\'s migration to Angular v13 with a zero-downtime rollout via Jenkins CI/CD, and mentored newly onboarded engineers.',
-    technologies: ['Angular', 'TypeScript', 'WebSocket', 'Jenkins', 'SonarQube', 'SQL Server'],
+      "Built a kitchen display system on WebSocket that cut prep errors by about 30%. I also moved the web client from Angular 7 to 13 on my own and wrote the Selenium regression suites.",
+    technologies: ['Angular', 'TypeScript', 'WebSocket', 'Selenium', 'Jenkins', 'SonarQube'],
     insight: {
       icon: ZapIcon,
       title: 'Real-Time Streaming',
-      description: 'Streamed live order state via WebSocket APIs at sub-1s latency, holding up under 100+ concurrent orders at peak service.',
+      description: 'Orders from POS terminals show up on kitchen screens as a live queue over WebSocket.',
     },
   },
   {
@@ -57,7 +65,7 @@ const experiences: ExperienceEntry[] = [
     company: 'Dr. Mahalingam College of Engineering and Technology',
     period: '2018 - 2022',
     description:
-      "Completed my Bachelor's degree in Computer science, building a strong foundation in core computer science concepts through coursework, projects, and hands-on experience.",
+      "B.Tech in Computer Science and Engineering.",
     technologies: ['C', 'Java', 'AWS', 'Android Studio'],
   },
 ]
@@ -75,8 +83,7 @@ export function Experience() {
             Experience<span className="text-accent">.</span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mt-4">
-            A chronological timeline of my professional journey in software engineering,
-            highlighting key roles, responsibilities, and technical achievements.
+            Where I've worked and studied, and what I built along the way.
           </p>
         </div>
 

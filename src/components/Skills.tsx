@@ -2,24 +2,24 @@ import { CodeIcon, ServerIcon, CloudIcon, ClipboardCheckIcon } from 'lucide-reac
 
 const CATEGORIES = [
   {
-    title: 'Frontend',
+    title: 'Frontend & Mobile',
     icon: CodeIcon,
-    chips: ['React', 'React Native', 'TypeScript', 'JavaScript', 'Angular', 'TanStack Query'],
+    chips: ['React', 'React Native (Expo)', 'Angular', 'TypeScript', 'Astro', 'Apple HealthKit'],
   },
   {
-    title: 'Tools & Testing',
+    title: 'Backend & Testing',
     icon: ClipboardCheckIcon,
-    chips: ['Playwright', 'Jest / Vitest', 'Pytest', 'Git / GitHub', 'OAuth / JWT', 'Claude Code'],
+    chips: ['Java', 'Spring Boot', 'Kafka', 'WebSocket', 'Selenium', 'SonarQube'],
   },
   {
-    title: 'Backend & Real-Time',
+    title: 'GenAI & Data',
     icon: ServerIcon,
-    chips: ['Node.js / Express', 'FastAPI', 'Spring Boot', 'WebSocket APIs', 'PostgreSQL', 'DynamoDB'],
+    chips: ['RAG / LLM Eval', 'MCP', 'Pinecone', 'PostgreSQL', 'DynamoDB', 'Elasticsearch'],
   },
   {
     title: 'Cloud & DevOps',
     icon: CloudIcon,
-    chips: ['AWS Lambda', 'Docker', 'Jenkins CI/CD', 'Bedrock', 'S3', 'Kafka'],
+    chips: ['AWS Lambda', 'AWS SAM', 'S3', 'Docker', 'Jenkins CI/CD', 'Azure'],
   },
 ]
 
@@ -41,8 +41,7 @@ export function Skills() {
             Technical <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-soft to-accent">Proficiency</span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl">
-            A comprehensive look at my technical stack, highlighting expertise across
-            frontend, backend, real-time systems, and cloud infrastructure.
+            The languages, frameworks and services I use most.
           </p>
         </div>
 
@@ -107,9 +106,8 @@ export function Skills() {
           <div className="flex flex-col justify-center gap-4 bg-slate-900/60 p-8 rounded-xl border border-slate-800">
             <h3 className="text-xl font-bold text-slate-100">Continuous Learning</h3>
             <p className="text-slate-400">
-              Technology evolves rapidly, and so does my skillset. I dedicate time weekly to
-              exploring emerging frameworks, optimizing build processes, and refining my
-              understanding of core computer science principles to build robust, scalable applications.
+              I set aside time each week to try new frameworks and brush up on CS fundamentals.
+              Lately that has mostly meant LLM tooling like MCP servers and evals.
             </p>
           </div>
         </div>

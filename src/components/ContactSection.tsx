@@ -47,8 +47,7 @@ export function ContactSection() {
                 Let&apos;s talk!
               </h2>
               <p className="text-lg text-slate-400 max-w-md">
-                Have a project in mind or just want to say hello? Feel free to reach out to me.
-                I&apos;m always open to discussing new projects and opportunities.
+                If you&apos;re hiring, have a project, or just want to say hello, send me a message.
               </p>
             </div>
 

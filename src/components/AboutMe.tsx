@@ -4,23 +4,23 @@ const SERVICES = [
     {
         icon: CodeIcon,
         title: 'Full-Stack Development',
-        description: 'Building responsive, production-grade web and mobile applications with React, TypeScript, and modern frameworks.',
+        description: 'Web and mobile apps in React, React Native and TypeScript, built to run in production.',
     },
     {
         icon: ZapIcon,
         title: 'Real-Time Systems',
-        description: 'Designing sub-1s WebSocket platforms and event-driven architectures that hold up under heavy concurrent load.',
+        description: 'WebSocket services that push live events to screens, like the kitchen display system I built at GoFrugal.',
     },
     {
         icon: CloudIcon,
         title: 'Cloud & Infra',
-        description: 'Shipping scalable Python/Java backends on AWS, from Lambda orchestration to CI/CD pipelines.',
+        description: 'Python and Java backends on AWS: Lambda functions, S3, SAM deployments and Jenkins pipelines.',
     },
 ]
 
 const STATS = [
     { value: '2', suffix: '+', label: 'Years of\nExperience' },
-    { value: '40', suffix: '%+', label: 'Retention Impact\nDriven' },
+    { value: '95', suffix: '%', label: 'LLM Eval\nPass Rate' },
     { value: '500', suffix: '+', label: 'Clients Served\n(POS Platform)' },
 ]
 
@@ -58,16 +58,15 @@ export default function AboutMe() {
                             </h2>
                             <div className="space-y-4 text-slate-400 text-lg">
                                 <p>
-                                    I'm a full-stack engineer with over 2 years of experience shipping production, real-time
-                                    systems: sub-1-second WebSocket platforms, React/TypeScript interfaces, and scalable
-                                    Python/Java backends on AWS. I own features end-to-end, from idea to launch, and work
-                                    closely with product and design along the way.
+                                    I'm a software engineer with a little over 2 years of experience. I've built RAG
+                                    pipelines, WebSocket services, React and React Native apps, and backends on AWS. I
+                                    like owning a feature all the way through, and I work closely with product and design
+                                    while I do it.
                                 </p>
                                 <p>
-                                    Currently, I'm pursuing a Master's in Computer Science at Binghamton University (SUNY),
-                                    building on a Post Graduate Data Science Certification in statistical modeling and
-                                    machine learning from VIT. When I'm not coding, you can find me travelling, watching
-                                    sci-fi shows, or creating 3D models.
+                                    Right now I'm a Software Development Engineer at Neo Health. I have a Master's in
+                                    Computer Science from Binghamton University (SUNY) and a Post Graduate Program in
+                                    Data Science from VIT. Outside of work I travel, watch sci-fi, and make 3D models.
                                 </p>
                             </div>
                         </div>
